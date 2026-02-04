@@ -1,0 +1,175 @@
+/* Contenedor de filtros */
+.containerCa {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 50;
+  border-bottom: 2px solid rgb(141, 210, 30);
+}
+
+/* Contenedor principal */
+.containerCb {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 140px;
+  box-sizing: border-box;
+}
+
+/* Grid de cards */
+.cardsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.selectFav {
+  background-color: rgb(141, 210, 30);
+  padding: 8px 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 140px;
+}
+
+.selectFav:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(141, 210, 30);
+  border-color: rgb(141, 210, 30);
+}
+
+.selectFav:focus {
+  outline: 2px solid rgb(141, 210, 30);
+  outline-offset: 2px;
+}
+
+/* Botón de reset */
+.resetBtn {
+  background-color: #dc3545;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.resetBtn:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}
+
+/* Info de resultados */
+.resultsInfo {
+  text-align: center;
+  padding: 10px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+
+.resultsInfo p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Móviles pequeños */
+@media (max-width: 600px) {
+  .containerCa {
+    top: auto;
+    position: relative;
+    padding: 10px;
+    margin-top: 60px;
+    gap: 8px;
+  }
+
+  .containerCb {
+    padding-top: 10px;
+  }
+
+  .cardsGrid {
+    padding: 15px 10px;
+    gap: 15px;
+  }
+
+  .selectFav {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    min-width: 120px;
+  }
+
+  .resetBtn {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+
+  .resultsInfo p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 900px) {
+  .containerCa {
+    gap: 8px;
+    padding: 10px 20px;
+  }
+
+  .containerCb {
+    padding-top: 130px;
+  }
+
+  .cardsGrid {
+    padding: 15px;
+  }
+
+  .selectFav {
+    padding: 7px 12px;
+    font-size: 0.8rem;
+    min-width: 130px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 901px) {
+  .containerCa {
+    gap: 15px;
+    padding: 12px 25px;
+  }
+
+  .containerCb {
+    padding-top: 140px;
+  }
+
+  .cardsGrid {
+    padding: 20px 30px;
+    gap: 25px;
+  }
+
+  .selectFav {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+    min-width: 150px;
+  }
+
+  .resetBtn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}

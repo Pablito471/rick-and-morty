@@ -1,0 +1,146 @@
+.containerDt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(137, 43, 226, 0.6);
+  border-radius: 20px;
+  width: 320px;
+  font-size: 1rem;
+  text-align: left;
+  color: rgb(255, 238, 0);
+  padding: 20px;
+  margin: 80px auto 30px;
+  box-sizing: border-box;
+}
+
+.containerDt h3 {
+  margin: 8px 0;
+  font-size: 0.95rem;
+  width: 100%;
+}
+
+.imgDt {
+  border-radius: 50%;
+  margin-top: 15px;
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+}
+
+@keyframes explode {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.imgDt:hover {
+  animation: explode 1.5s linear;
+}
+
+.divButtonDt {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.buttonDt {
+  width: 50px;
+  height: 40px;
+  padding: 10px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  transition: 0.5s;
+  background: #1e1e1e;
+  color: greenyellow;
+  box-shadow:
+    0 0 10px #363636,
+    inset 0 0 10px #363636;
+  cursor: pointer;
+}
+
+.buttonDt:hover {
+  animation: a 0.5s 1 linear;
+}
+
+@keyframes a {
+  0% {
+    transform: scale(0.7, 1.3);
+  }
+  25% {
+    transform: scale(1.3, 0.7);
+  }
+  50% {
+    transform: scale(0.7, 1.3);
+  }
+  75% {
+    transform: scale(1.3, 0.7);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 600px) {
+  .containerDt {
+    width: 90%;
+    max-width: 300px;
+    padding: 15px;
+    margin-top: 80px;
+  }
+
+  .containerDt h3 {
+    font-size: 0.85rem;
+  }
+
+  .imgDt {
+    width: 130px;
+    height: 130px;
+  }
+
+  .buttonDt {
+    width: 40px;
+    height: 32px;
+    font-size: 13px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 900px) {
+  .containerDt {
+    width: 340px;
+  }
+
+  .imgDt {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 901px) {
+  .containerDt {
+    width: 380px;
+    padding: 25px;
+  }
+
+  .containerDt h3 {
+    font-size: 1.05rem;
+  }
+
+  .imgDt {
+    width: 180px;
+    height: 180px;
+  }
+}

@@ -1,0 +1,238 @@
+::selection {
+  background-color: gray;
+}
+
+.parE {
+  color: rgb(0, 8, 255);
+  font-size: 14px;
+  font-weight: bolder;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  min-height: 20px;
+}
+
+/* Container principal para centrar todo */
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 320px;
+  gap: 8px;
+  background: linear-gradient(
+    to right,
+    rgba(3, 255, 32, 0.477),
+    rgba(187, 220, 0, 0.463)
+  );
+  padding: 30px;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  margin: 60px auto 20px;
+}
+
+.form:hover {
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+  color: rgb(246, 255, 0);
+  font-weight: bold;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.username {
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(0, 0, 0);
+}
+
+.form button {
+  margin-top: 20px;
+  margin-bottom: 6px;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgb(0, 38, 255);
+  cursor: pointer;
+}
+
+.form label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.form button:hover {
+  box-shadow: 2px 2px 12px rgb(0, 30, 255);
+}
+
+.input {
+  height: 40px;
+  outline: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 2px 2px 12px inset black;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* GIFs decorativos - ocultos en móvil */
+.gif,
+.gif2 {
+  display: none;
+}
+
+.divButtonF {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+}
+
+.btn:hover {
+  color: white;
+  background-color: rgb(8, 8, 8);
+  box-shadow: none;
+}
+
+.ButtonF {
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  transition: 0.5s;
+  background: #ffffff;
+  color: rgb(12, 12, 12);
+  box-shadow:
+    0 0 10px #363636,
+    inset 0 0 10px #363636;
+  opacity: 0.7;
+}
+
+.ButtonF:hover {
+  cursor: pointer;
+  animation: a 0.5s 1 linear;
+  opacity: 1;
+}
+
+.divButtonR {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 100;
+}
+
+.ButtonR {
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  transition: 0.5s;
+  background: #ffffff;
+  color: rgb(12, 12, 12);
+  box-shadow:
+    0 0 10px #363636,
+    inset 0 0 10px #363636;
+  opacity: 0.7;
+}
+
+.ButtonR:hover {
+  cursor: pointer;
+  animation: a 0.5s 1 linear;
+  opacity: 1;
+}
+
+@keyframes a {
+  0% {
+    transform: scale(0.7, 1.3);
+  }
+  25% {
+    transform: scale(1.3, 0.7);
+  }
+}
+
+/* Estilos para botón deshabilitado */
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+.btn:disabled:hover {
+  box-shadow: none;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+/* Tablets */
+@media only screen and (min-width: 768px) {
+  .gif {
+    display: block;
+    position: fixed;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 150px;
+    height: auto;
+    z-index: 1;
+  }
+
+  .gif2 {
+    display: block;
+    position: fixed;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: auto;
+    z-index: 1;
+  }
+
+  .form {
+    max-width: 350px;
+    padding: 40px;
+  }
+
+  .ButtonF,
+  .ButtonR {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+/* Desktop grandes */
+@media only screen and (min-width: 1200px) {
+  .gif {
+    width: 200px;
+    left: 15%;
+  }
+
+  .gif2 {
+    width: 300px;
+    right: 15%;
+  }
+}

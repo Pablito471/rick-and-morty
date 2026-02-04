@@ -1,0 +1,42 @@
+.App {
+  text-align: center; /* Alinear el texto al centro */
+  min-height: 100vh;
+}
+
+body {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: white;
+}
+
+/* Estilos para pantallas grandes */
+@media only screen and (min-width: 1024px) {
+  body {
+    background-size: cover;
+  }
+}
+
+/* Estilos para tablets */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  body {
+    margin-left: 0;
+    width: 100%;
+    max-width: none;
+    background-size: cover;
+  }
+}
+
+/* Estilos para móviles */
+@media only screen and (max-width: 767px) {
+  body {
+    margin-left: 0;
+    background-size: cover;
+  }
+}

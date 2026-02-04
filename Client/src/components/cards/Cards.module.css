@@ -1,0 +1,34 @@
+.containerCs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 80px 20px 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Móviles pequeños */
+@media (max-width: 600px) {
+  .containerCs {
+    padding: 120px 10px 20px;
+    gap: 15px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 900px) {
+  .containerCs {
+    padding: 90px 15px 25px;
+    gap: 18px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 901px) {
+  .containerCs {
+    padding: 80px 30px 30px;
+    gap: 25px;
+  }
+}
